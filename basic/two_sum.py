@@ -14,7 +14,8 @@ O motivo é bastante simples:
 -2 + 11 = 9
 """
 
-# Solução 1
+
+# Solução 1 O(n²)
 def two_sum(numbers, target_sum):
     for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
@@ -23,7 +24,8 @@ def two_sum(numbers, target_sum):
 
     return []
 
-# Solução 2
+
+# Solução 2 O(n)
 def two_sum(numbers, target_sum):
     hash_table = {}
 
@@ -37,7 +39,8 @@ def two_sum(numbers, target_sum):
 
     return []
 
-# Solução 3
+
+# Solução 3 O(n log(n))
 def two_sum(numbers, target_sum):
     numbers.sort()
     left, right = 0, len(numbers) - 1

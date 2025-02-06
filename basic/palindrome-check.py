@@ -10,12 +10,13 @@ Logo, não é uma palindrome.
 Ja se recebemos a string abccba uma vez invertida temos abccba que são iguais e a função deve retornar True nesta situação.
 """
 
+
 def solution(string):
-    temp_str = ''
+    temp_str = ""
     string = string.lower()
 
     for i in range(len(string) - 1, -1, -1):
-      temp_str += string[i]
+        temp_str += string[i]
 
     return temp_str == string
 
@@ -33,3 +34,7 @@ def solution(string):
         reversed_index -= 1
 
     return True
+
+
+def solution(string):
+    return string.lower() == string[::-1].lower()
