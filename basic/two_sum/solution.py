@@ -1,22 +1,5 @@
-"""
-O Two Sum é bastante comum durante entrevistas. Seu objetivo é identificar um par de números que somados batam com o valor da variável target.
-
-Ele pode ser escrito em um algoritmo que roda no tempo O(n).
-
-Exemplo:
-
-Se o array é [4, 1, 2, -2, 11, 15, 1, -1, -6, -4] e o target é 9. Neste caso, seu programa deve retornar:
-
-[-2, 11]
-
-O motivo é bastante simples:
-
--2 + 11 = 9
-"""
-
-
 # Solução 1 O(n²)
-def two_sum(numbers, target_sum):
+def solution(numbers, target_sum):
     for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
             if numbers[i] + numbers[j] == target_sum:
@@ -26,7 +9,7 @@ def two_sum(numbers, target_sum):
 
 
 # Solução 2 O(n)
-def two_sum(numbers, target_sum):
+def solution(numbers, target_sum):
     hash_table = {}
 
     for n in numbers:
@@ -41,7 +24,7 @@ def two_sum(numbers, target_sum):
 
 
 # Solução 3 O(n log(n))
-def two_sum(numbers, target_sum):
+def solution(numbers, target_sum):
     numbers.sort()
     left, right = 0, len(numbers) - 1
 
