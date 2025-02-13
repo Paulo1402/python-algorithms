@@ -71,23 +71,27 @@ def minimum_depth_of_binary_tree_fixture():
 
 minimum_depth_of_binary_tree_test_data = [
     (
-        BinaryTree(
-            value=3,
-            left=BinaryTree(value=9),
-            right=BinaryTree(
-                value=20, left=BinaryTree(value=15), right=BinaryTree(value=7)
+        (
+            BinaryTree(
+                value=3,
+                left=BinaryTree(value=9),
+                right=BinaryTree(
+                    value=20, left=BinaryTree(value=15), right=BinaryTree(value=7)
+                ),
             ),
         ),
         2,
     ),
     (
-        BinaryTree(
-            value=2,
-            right=BinaryTree(
-                value=3, right=BinaryTree(value=4, right=BinaryTree(value=5))
+        (
+            BinaryTree(
+                value=2,
+                right=BinaryTree(
+                    value=3, right=BinaryTree(value=4, right=BinaryTree(value=5))
+                ),
             ),
         ),
-        3,
+        4,
     ),
 ]
 
@@ -99,7 +103,7 @@ def palindrome_check_fixture():
 
 palindrome_check_test_data = [
     (("ana",), True),
-    (("anana",), False),
+    (("array",), False),
 ]
 
 
@@ -134,9 +138,9 @@ def two_sum_fixture():
 
 
 two_sum_test_data = [
-    (([2, 7, 11, 15], 9), [0, 1]),
-    (([3, 2, 4], 6), [1, 2]),
-    (([3, 3], 6), [0, 1]),
+    (([2, 7, 11, 15], 9), [2, 7]),
+    (([3, 2, 4], 6), [2, 4]),
+    (([3, 3], 6), [3, 3]),
 ]
 
 

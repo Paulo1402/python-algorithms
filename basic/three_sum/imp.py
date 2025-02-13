@@ -13,4 +13,6 @@ def solution(numbers, target_sum):
                 if first + second + third == target_sum:
                     result.append(sorted([first, second, third]))
 
+    result.sort()
+
     return result

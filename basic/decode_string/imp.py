@@ -1,36 +1,53 @@
 def solution(str_to_decode):
-    def parse_str(str_to_decode, index=0, number=None):
-        str_decoded = ""
+    stack = []
+    number = 0
+    temp_str = ""
 
-        while index < len(str_to_decode):
-            str = str_to_decode[index]
+    for s in str_to_decode:
+        if s == "[":
+            if temp_str:
+                stack.append(temp_str)
+                temp_str = ""
 
-            if str == "]":
-                break
+            stack.append(number)
+            number = 0
+        elif s == "]":
+            if temp_str:
+                stack.append(temp_str)
+                temp_str = ""
 
-            if str == "[":
-                index += 1
-                continue
+            new_str = ""
+            first = stack.pop()
 
-            if str.isdigit():
-                if number:
-                    _number = f"{number}{str}"
-                else:
-                    _number = str
+            while first and type(first) != int:
+                new_str = first + new_str
+                first = stack.pop()
 
-                _number = int(_number)
-                number = None
-
-                content, index = parse_str(str_to_decode, index + 1, number=_number)
-                str_decoded += content
+            new_str *= first
+            stack.append(new_str)
+        else:
+            if s.isdigit():
+                number = 10 * number + int(s)
             else:
-                str_decoded += str
-                index += 1
+                temp_str += s
 
-        if number:
-            str_decoded = str_decoded * number
+    if temp_str:
+        stack.append(temp_str)
 
-        return str_decoded, index + 1
+    return "".join(stack)
 
-    str_decoded, _ = parse_str(str_to_decode)
-    return str_decoded
+
+if __name__ == "__main__":
+    test_data = [
+        ("3[a]2[bc]", "aaabcbc"),
+        ("3[a2[c]]", "accaccacc"),
+        ("2[abc]3[cd]ef", "abcabccdcdcdef"),
+    ]
+
+    for data in test_data:
+        str_to_decode, expected = data
+        result = solution(str_to_decode)
+
+        assert result == expected, f"{result} != {expected}"
+
+    print("PASSED")
