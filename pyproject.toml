@@ -1,13 +1,13 @@
 [project]
-name = "algomania"
+name = "python-algorithms"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python algorithms"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = []
 
 [tool.uv]
 dev-dependencies = [
+    "pytest>=8.3.5",
     "pytest-watch>=4.2.0",
-    "pytest>=8.3.4",
 ]

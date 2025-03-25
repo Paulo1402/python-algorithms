@@ -32,7 +32,7 @@ python -m venv .venv
 pip install -r pyproject.toml
 ```
 
-Na sequência, navegue até o diretório do algoritmo que deseja praticar e siga as instruções do README.md.
+Na sequência, navegue até o diretório do algoritmo que deseja praticar e siga as instruções do arquivo `README.md`.
 
 Para cada algoritmo, você encontrará uma descrição do problema, a solução e os testes unitários.
 
@@ -52,9 +52,10 @@ Para executar os testes, utilize o comando:
 ptw -- -k <nome_do_algoritmo>
 ```
 
-# Exemplo
+#### Exemplo:
 
-# ptw -- -k sum_of_two_numbers
+```bash
+ptw -- -k sum_of_two_numbers
 
 ```
 
