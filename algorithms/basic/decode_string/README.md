@@ -49,13 +49,10 @@ Caso queira visualizar uma possível solução para o algoritmo, consulte o arqu
 Para executar os testes, utilize o comando:
 
 ```bash
-ptw -- -k <nome_do_algoritmo>
-```
+sh ./scripts/run-tests.sh <nome-do-pacote>
 
 # Exemplo
-
-# ptw -- -k sum_of_two_numbers
-
+# sh ./scripts/run-tests.sh decode_string
 ```
 
 Esse comando irá executar os testes unitários para a implementação do algoritmo em modo `watch`, ou seja, sempre que

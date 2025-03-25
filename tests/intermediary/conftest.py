@@ -1,6 +1,11 @@
 import pytest
 
-from intermediary import compare_binary_search, path_sum_2, simplify_path, word_search
+from algorithms.intermediary import (
+    compare_binary_search,
+    simplify_path,
+    path_sum_2,
+    word_search,
+)
 
 from tests.conftest import BinaryTree
 

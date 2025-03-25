@@ -1,15 +1,14 @@
 import pytest
 
-from basic import (
+from algorithms.basic import (
     decode_string,
     invert_binary_tree,
     minimum_depth_of_binary_tree,
-    palindrome_check,
-    top_k_most_frequent_element,
     three_sum,
     two_sum,
     valid_parentheses,
 )
+from algorithms.basic import palindrome_check, top_k_most_frequent_element
 from tests.conftest import BinaryTree
 
 
