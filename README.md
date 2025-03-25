@@ -17,30 +17,32 @@ Dentro de cada nível, os algoritmos estão organizados por pacotes. Cada pacote
 
 ## ⭐ Como usar
 
-Primeiramente, clone o repositório, ative o ambiente virtual e instale as dependências:
+### 🚀 Configuração do ambiente
+
+Recomendo o uso de um ambiente virtual para instalar as dependências do projeto. Para isso, você pode utilizar
+o [uv](https://docs.astral.sh/uv/#installation), um gerenciador de ambientes virtuais simples e fácil de usar.
+
+Após instalar o `uv`, siga os passos abaixo:
 
 ```bash
 # Clone o repositório
-git clone
+git clone https://github.com/Paulo1402/python-algorithms.git
 cd python-algorithms
 
-# Crie e ative o ambiente virtual
-python -m venv .venv
-. .venv/bin/activate
-
-# Instale as dependências
-pip install -r pyproject.toml
+# Crie, ative o ambiente virtual e instale as dependências
+uv sync
 ```
-
-Na sequência, navegue até o diretório do algoritmo que deseja praticar e siga as instruções do arquivo `README.md`.
-
-Para cada algoritmo, você encontrará uma descrição do problema, a solução e os testes unitários.
 
 ### ▶️ Implementação do algoritmo
 
+Navegue até o diretório do algoritmo que deseja praticar e siga as instruções do arquivo `README.md`.
+
+Para cada algoritmo, você encontrará uma descrição do problema, a solução e os testes unitários.
+
 A solução do algoritmo deve ser implementada em um arquivo chamado `imp.py`, na raíz do pacote do algoritmo
-correspondente. A assinatura da função você encontrará no arquivo
-`README.md`.
+correspondente.
+
+A assinatura da função você encontrará no arquivo `README.md`.
 
 Caso queira visualizar uma possível solução para o algoritmo, consulte o arquivo `solution.py`.
 
