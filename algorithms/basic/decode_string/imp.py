@@ -35,19 +35,3 @@ def solution(str_to_decode):
         stack.append(temp_str)
 
     return "".join(stack)
-
-
-if __name__ == "__main__":
-    test_data = [
-        ("3[a]2[bc]", "aaabcbc"),
-        ("3[a2[c]]", "accaccacc"),
-        ("2[abc]3[cd]ef", "abcabccdcdcdef"),
-    ]
-
-    for data in test_data:
-        str_to_decode, expected = data
-        result = solution(str_to_decode)
-
-        assert result == expected, f"{result} != {expected}"
-
-    print("PASSED")

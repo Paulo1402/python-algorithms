@@ -1,67 +1,19 @@
-# ❤️ Python Algorithms
+# Basic Algorithms
 
-Implementação de algoritmos comuns em entrevistas de programação utilizando Python.
+## Decode String
 
-Os algoritmos estão divididos entre três níveis de dificuldade:
+Dada uma string codificada, retorne a string decodificada.
 
-- **Basic**: Algoritmos simples e diretos.
-- **Intermediary**: Algoritmos mais complexos, que requerem um pouco mais de raciocínio.
-- **Advanced**: Algoritmos complexos, que requerem um bom raciocínio e conhecimento avançado.
+A regra de codificação é: `k[string_codificada]`, onde a `string_codificada` dentro dos colchetes serão repetidas o
+número
+de `k` vezes. O valor de `k` será sempre um número positivo.
 
-Dentro de cada nível, os algoritmos estão organizados por pacotes. Cada pacote contém um conjunto de arquivos, sendo:
+Você deve assumir que as strings de entrada são sempre válidas, sem espaço e os colchetes estão bem formatados.
 
-- **README.md**: Descrição do pacote e dos algoritmos.
-- **solution.py**: Solução do algoritmo.
-- **imp.py**: Implementação do algoritmo.
-- **test_imp.py**: Testes unitários para a implementação do algoritmo.
+### Exemplo
 
-## ⭐ Como usar
-
-Primeiramente, clone o repositório, ative o ambiente virtual e instale as dependências:
-
-```bash
-# Clone o repositório
-git clone
-cd python-algorithms
-
-# Crie e ative o ambiente virtual
-python -m venv .venv
-. .venv/bin/activate
-
-# Instale as dependências
-pip install -r pyproject.toml
+```python
+solution("3[a]2[bc]")  # "aaabcbc"
+solution("3[a2[c]]")  # "accaccacc"
+solution("2[abc]3[cd]ef")  # "abcabccdcdcdef"
 ```
-
-Na sequência, navegue até o diretório do algoritmo que deseja praticar e siga as instruções do README.md.
-
-Para cada algoritmo, você encontrará uma descrição do problema, a solução e os testes unitários.
-
-### ▶️ Implementação do algoritmo
-
-A solução do algoritmo deve ser implementada em um arquivo chamado `imp.py`, na raíz do pacote do algoritmo
-correspondente. A assinatura da função você encontrará no arquivo
-`README.md`.
-
-Caso queira visualizar uma possível solução para o algoritmo, consulte o arquivo `solution.py`.
-
-### 🧪 Testes
-
-Para executar os testes, utilize o comando:
-
-```bash
-sh ./scripts/run-tests.sh <nome-do-pacote>
-
-# Exemplo
-# sh ./scripts/run-tests.sh decode_string
-```
-
-Esse comando irá executar os testes unitários para a implementação do algoritmo em modo `watch`, ou seja, sempre que
-você alterar o código, os testes serão executados automaticamente.
-
-Conforme você implementa a solução, os testes irão falhar. Quando todos os testes passarem, você terá implementado a
-solução corretamente.
-
-### Happy coding! 🚀
-
-
-

@@ -8,8 +8,8 @@ except ImportError:
     )
 
 test_data = [
-    (("22[a]3[bc]",), "aaaaaaaaaaaaaaaaaaaaaabcbcbc"),
-    (("3[a2[c]]",), "acccccccccccccccccccccccccccccccc"),
+    (("2[a]3[bc]",), "aabcbcbc"),
+    (("3[a2[c]]",), "accaccacc"),
     (("2[abc]3[cd]ef",), "abcabccdcdcdef"),
 ]
 

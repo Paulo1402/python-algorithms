@@ -33,9 +33,9 @@ cd python-algorithms
 uv sync
 ```
 
-### ▶️ Implementação do algoritmo
-
 Navegue até o diretório do algoritmo que deseja praticar e siga as instruções do arquivo `README.md`.
+
+### ▶️ Implementação do algoritmo
 
 Para cada algoritmo, você encontrará uma descrição do problema, a solução e os testes unitários.
 

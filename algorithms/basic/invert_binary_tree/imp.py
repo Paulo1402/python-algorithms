@@ -16,3 +16,23 @@ def solution(tree):
 
     inverted_tree = invert_tree(tree)
     return inverted_tree
+
+
+from algorithms.utils import BinaryTree
+
+result = solution(
+    BinaryTree(
+        value=1,
+        left=BinaryTree(
+            value=2,
+            left=BinaryTree(value=4),
+            right=BinaryTree(value=5),
+        ),
+        right=BinaryTree(
+            value=3,
+            left=BinaryTree(value=6),
+        ),
+    )
+)
+
+print(result)
